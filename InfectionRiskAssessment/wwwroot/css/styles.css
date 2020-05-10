@@ -10570,10 +10570,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border: 6px solid #03a9f4;
 }
 
-.buttons-wrapper {
-  padding-bottom: 200px;
+.butoane{
+  bottom:200px;
 }
 
 .jumbotron {
-	background: rgba(224, 224, 224, 0.5); 
+	background: rgba(224, 224, 224, 0.5);
 }

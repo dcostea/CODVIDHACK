@@ -37,7 +37,7 @@ var quiz = {
     },
     "BirthYear": {
         type: "input",
-        value: null,
+        value: 0,
         number: 2,
         isRequired: false
     },
@@ -137,7 +137,7 @@ var quiz = {
     },
     "FeverTemperature": {
         type: "input",
-        value: null,
+        value: 0,
         number: 17,
         isRequired: false
     },
@@ -233,7 +233,7 @@ var quiz = {
     },
     "OtherIssues": {
         type: "input",
-        value: null,
+        value: "",
         number: 32,
         isRequired: true
     },
@@ -552,74 +552,30 @@ function checkAnswers(answers) {
 
 
 function sendRequest(data) {
+    if(!data.BirthYear) {
+        data.BirthYear = 0;
+    }
+    if(!data.FeverTemperature) {
+        data.FeverTemperature = 0;
+    }
+    if(!data.OtherIssues) {
+        data.OtherIssues = 0;
+    }
     fetch('https://helloworldforubuntu.azurewebsites.net/api/Readings/predict', {
         method: 'POST',
-        body: JSON.stringify(
-            {
-                "respondentId": 0,
-                "isMedical": 0,
-                "birthYear": 0,
-                "height": 0,
-                "weight": 0,
-                "place": 0,
-                "county": "string",
-                "isIsolated": 0,
-                "sex": 0,
-                "isPregnant": 0,
-                "hasContact": 0,
-                "daysAfterContact": 0,
-                "wasTested": 0,
-                "isPositive": 0,
-                "infectedAndNotTested": 0,
-                "presentState": 0,
-                "hasFever": 0,
-                "feverTemperature": 0,
-                "isCoughing": 0,
-                "isTired": 0,
-                "hasHeadache": 0,
-                "canBreathNormally": 0,
-                "hasSoreThroath": 0,
-                "isHoarse": 0,
-                "canSmell": 0,
-                "canTaste": 0,
-                "hasDiarrhea": 0,
-                "hasChestPain": 0,
-                "hasStomachAche": 0,
-                "hasMusclePain": 0,
-                "isConfused": 0,
-                "hasAppetite": 0,
-                "otherIssues": 0,
-                "hasHealthIssues": 0,
-                "needsHelp": 0,
-                "hasHelp": 0,
-                "usesWheelchair": 0,
-                "hasIssuesThatLimtActivity": 0,
-                "hasCardioVascularIssues": 0,
-                "usesBloodPressurePills": 0,
-                "usesAspirin": 0,
-                "hasDiabetes": 0,
-                "hasLungIssues": 0,
-                "isSmoking": 0,
-                "hasLiverIssues": 0,
-                "hasKidneyIssues": 0,
-                "isDoingDialysis": 0,
-                "hasCancer": 0,
-                "usesImmunosuppressivePills": 0,
-                "usesAntiInflammatoryPills": 0,
-                "hasTwin": 0,
-                "placeNow": 0,
-                "willReccomand": 0,
-                "agreesContact": 0,
-                "email": "string"
-              }
-        ),
-        mode: 'no-cors',
+        body: JSON.stringify(data),
         headers: {
             "Content-type": "application/json"
         }
     })
-    .then(response => response.text())
-    .then(json => console.log(json))
+    .then(response => response.json())
+    .then(json =>  {
+        console.log('sad', json)
+        let result = json.score[1];
+
+        window.location.href = "https://helloworldforubuntu.azurewebsites.net/result.html?risk=" + result;
+
+    })
     .catch(err => {
         console.log(err);
     })
