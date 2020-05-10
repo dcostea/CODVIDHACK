@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj": {}
+    "C:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj": {
+    "C:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
+        "projectUniqueName": "C:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
         "projectName": "InfectionRiskAssessment",
-        "projectPath": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
+        "projectPath": "C:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
         "packagesPath": "C:\\Users\\dcost\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\obj\\",
+        "outputPath": "C:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

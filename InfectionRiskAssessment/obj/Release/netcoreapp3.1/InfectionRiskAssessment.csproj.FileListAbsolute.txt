@@ -184,3 +184,4 @@ c:\Users\dcost\source\repos\Restore\CODVIDHACK\InfectionRiskAssessment\obj\Relea
 c:\Users\dcost\source\repos\Restore\CODVIDHACK\InfectionRiskAssessment\obj\Release\netcoreapp3.1\InfectionRiskAssessment.dll
 c:\Users\dcost\source\repos\Restore\CODVIDHACK\InfectionRiskAssessment\obj\Release\netcoreapp3.1\InfectionRiskAssessment.pdb
 c:\Users\dcost\source\repos\Restore\CODVIDHACK\InfectionRiskAssessment\obj\Release\netcoreapp3.1\InfectionRiskAssessment.genruntimeconfig.cache
+C:\Users\dcost\source\repos\Restore\CODVIDHACK\InfectionRiskAssessment\obj\Release\netcoreapp3.1\InfectionRiskAssessment.csprojAssemblyReference.cache
