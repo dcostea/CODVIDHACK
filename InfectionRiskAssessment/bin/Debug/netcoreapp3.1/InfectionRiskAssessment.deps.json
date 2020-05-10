@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "InfectionRiskAssessment/1.0.0": {
         "dependencies": {
+          "MathNet.Numerics": "4.9.1",
           "Microsoft.ML": "1.5.0-preview2",
           "Swashbuckle.AspNetCore": "5.4.1",
           "Swashbuckle.AspNetCore.Newtonsoft": "5.4.1",
@@ -315,6 +316,17 @@
         },
         "compile": {
           "InfectionRiskAssessment.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.9.1": {
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "4.9.1.0",
+            "fileVersion": "4.9.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
         }
       },
       "Microsoft.AspNetCore.JsonPatch/3.0.0": {
@@ -2316,6 +2328,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MathNet.Numerics/4.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tLg/nvtdYd830Ee8nWsrsIiBTxeKmUEtsrQIPX4Sn60l7eMmZFIvSaMdG6o08FGsByi0TArJ6tx8LVT4vpWqyQ==",
+      "path": "mathnet.numerics/4.9.1",
+      "hashPath": "mathnet.numerics.4.9.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/3.0.0": {
       "type": "package",

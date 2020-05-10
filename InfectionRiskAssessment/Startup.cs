@@ -20,6 +20,7 @@ namespace InfectionRiskAssessment
         }
 
         public IConfiguration Configuration { get; }
+        readonly string CodvidHack = "codvidhack";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -29,6 +30,17 @@ namespace InfectionRiskAssessment
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
             services.AddSwaggerGenNewtonsoftSupport();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: CodvidHack,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
 
             services.AddControllersWithViews();
         }
@@ -42,8 +54,6 @@ namespace InfectionRiskAssessment
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -52,6 +62,8 @@ namespace InfectionRiskAssessment
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(CodvidHack);
 
             app.UseSwagger();
 
@@ -62,9 +74,7 @@ namespace InfectionRiskAssessment
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
         }
     }
