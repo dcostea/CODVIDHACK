@@ -2113,11 +2113,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dcost\\source\\repos\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
+      "projectUniqueName": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
       "projectName": "InfectionRiskAssessment",
-      "projectPath": "C:\\Users\\dcost\\source\\repos\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
+      "projectPath": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
       "packagesPath": "C:\\Users\\dcost\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dcost\\source\\repos\\CODVIDHACK\\InfectionRiskAssessment\\obj\\publish\\linux-x64\\",
+      "outputPath": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\obj\\publish\\linux-x64\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

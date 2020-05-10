@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="HelloWorldForUbuntu" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\dcost\\source\\repos\\CODVIDHACK\\InfectionRiskAssessment\\obj\\Release\\netcoreapp3\.1\\linux-x64\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\obj\\Release\\netcoreapp3\.1\\linux-x64\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

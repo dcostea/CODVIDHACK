@@ -1,0 +1,82 @@
+@import "reset";
+
+/* main.scss */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: #faf7f7;
+    font-family: Helvetica,Arial,sans-serif
+}
+.chart_wrapper {
+    $pie_chart_dia: 225px; // pie chart diameter
+    $pie_chart_rad: $pie_chart_dia/2; // pie chart radius
+    $circle_label_dia: 165px; // circle label diameter
+    $circle_label_rad: $pie_chart_dia/2; // circle label radius
+    
+    position: relative;
+    
+    /* Margin around pie chart. This is optional. */
+    margin:10px; 
+
+    /* This forces the charts to display inline. This is added for this demo and is optional. */
+    display: inline-block;
+
+    canvas {
+        -webkit-border-radius: $pie_chart_rad;
+        -moz-border-radius: $pie_chart_rad;
+        border-radius: $pie_chart_rad;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+        width: $pie_chart_dia;
+        height: $pie_chart_dia;
+    }
+
+    .circle {
+        position: absolute;
+        top:($pie_chart_dia - $circle_label_dia)/2;
+        left: ($pie_chart_dia - $circle_label_dia)/2;
+        width: $circle_label_dia;
+        height: $circle_label_dia;
+        
+        /* positioning label text vertically */
+        padding-top: 50px; 
+        -webkit-border-radius: $circle_label_rad;
+        -moz-border-radius: $circle_label_rad;
+        border-radius: $circle_label_rad;
+        span {
+            width: 100%;
+            display: block;
+            text-align: center;
+            color: #fff;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tagline {
+            font-size: 12px;
+        }
+        .pie_value {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+    }
+    .circle.light {
+        span {
+            color: #525252;
+        }
+    }
+    .circle.dark {
+        span {
+            color: #fff;
+        }
+    }
+    .circle.pink {
+        background: #bf008d;
+    }
+    .circle.gray {
+        background: #ddd;
+    }
+}

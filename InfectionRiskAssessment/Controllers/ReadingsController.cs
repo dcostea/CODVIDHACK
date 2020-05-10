@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using InfectionRiskAssessment.Models;
 using Microsoft.ML;
 using InfectionRiskAssessment.MachineLearning;
-using MathNet.Numerics.Statistics;
 
 namespace InfectionRiskAssessment.Models
 {
@@ -37,6 +32,7 @@ namespace InfectionRiskAssessment.Models
         }
 
         [HttpGet("all")]
+        [Obsolete]
         public IActionResult GetAll()
         {
             var readings = _mlContext.Data.CreateEnumerable<Reading>(_dataset, true);
@@ -45,6 +41,7 @@ namespace InfectionRiskAssessment.Models
         }
 
         [HttpGet("{id}")]
+        [Obsolete]
         public IActionResult Get(long id)
         {
             var readings = _mlContext.Data.CreateEnumerable<Reading>(_dataset, true);
@@ -65,6 +62,7 @@ namespace InfectionRiskAssessment.Models
         }
 
         [HttpPost("train")]
+        [Obsolete]
         public IActionResult Train()
         {
             var readings = _mlContext.Data.CreateEnumerable<Reading>(_dataset, true);
@@ -72,67 +70,19 @@ namespace InfectionRiskAssessment.Models
             var dataset = _mlContext.Data.LoadFromEnumerable<Reading>(cleaned);
             _model = Trainer.Train(_dataset);
 
-            //    new Graph.Box { y = featuresTemperatures, name = "Temperature" },
-
-            ////"IsMedical",
-            ////"BirthYear",
-            ////"IsIsolated",
-            ////"Sex",
-            ////"IsPregnant",
-            ////"HasContact",
-            ////"DaysAfterContact",
-            ////"PresentState",
-            ////"HasFever",
-            ////"FeverTemperature",
-            ////"IsCoughing",
-            ////"IsTired",
-            ////"HasHeadache",
-            ////"CanBreathNormally",
-            ////"HasSoreThroath",
-            ////"IsHoarse",
-            ////"CanSmell",
-            ////"CanTaste",
-            ////"HasDiarrhea",
-            ////"HasChestPain",
-            ////"HasStomachAche",
-            ////"HasMusclePain",
-            ////"IsConfused",
-            ////"HasAppetite",
-            ////"OtherIssues",
-            ////"HasHealthIssues",
-            ////"NeedsHelp",
-            ////"HasHelp",
-            ////"UsesWheelchair",
-            ////"HasIssuesThatLimtActivity",
-            ////"HasCardioVascularIssues",
-            ////"UsesBloodPressurePills",
-            ////"UsesAspirin",
-            ////"HasDiabetes",
-            ////"HasLungIssues",
-            ////"IsSmoking",
-            ////"HasLiverIssues",
-            ////"HasKidneyIssues",
-            ////"IsDoingDialysis",
-            ////"HasCancer",
-            ////"UsesImmunosuppressivePills",
-            ////"UsesAntiInflammatoryPills",
-            ////"HasTwin",
-            ////"PlaceNow",
-
-
-            //var value = Correlation.Pearson(new double[] { 0, 3, 1 }, new double[] { 0, 7, 0 });
-
-            return Ok();
-
-
+            return Ok("Model is created! Proceed to predictions.");
         }
 
         [HttpPost("predict")]
-        public IActionResult Predict(Reading reading)
+        public IActionResult TrainAndPredict(Reading reading)
         {
+            var readings = _mlContext.Data.CreateEnumerable<Reading>(_dataset, true);
+            var cleaned = readings.Where(r => r.WasTested == 1);
+            var dataset = _mlContext.Data.LoadFromEnumerable<Reading>(cleaned);
+            _model = Trainer.Train(_dataset);
             var result = Predictor.Predict(_model, reading);
 
-            return Ok($"{result.PredictedLabel} [{string.Join(",", result.Score)}]");
+            return Ok(result);
         }
     }
 }

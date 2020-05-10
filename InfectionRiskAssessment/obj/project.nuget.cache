@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uc32QhWnmgAwQZJjgzN12hMeXLKMq9fDHmTVFWR9wz7qzAmgRGMonTYeBT5d5PvXUt5Vj7wu2zPGtQH8rm5VdA==",
+  "dgSpecHash": "S7sE14f4T87ktN5usqsZ4RW14s2hJG8JQgZg7fdCPBOB/5rwpEK/Fr/LVLxm8LDqfB+R3mhn5nGu68QAbVWrng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dcost\\source\\repos\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
+  "projectFilePath": "c:\\Users\\dcost\\source\\repos\\Restore\\CODVIDHACK\\InfectionRiskAssessment\\InfectionRiskAssessment.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dcost\\.nuget\\packages\\mathnet.numerics\\4.9.1\\mathnet.numerics.4.9.1.nupkg.sha512",
     "C:\\Users\\dcost\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.0.0\\microsoft.aspnetcore.jsonpatch.3.0.0.nupkg.sha512",
