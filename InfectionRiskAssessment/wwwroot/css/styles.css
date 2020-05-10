@@ -56,10 +56,13 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  /* background-color: #fff; */
   background-image: url("../assets/img/national-cancer-institute-cQ8FfVNvbew-unsplash.png");
   background-repeat: no-repeat;
   background-position: center;
+  /* background: #ddd;   */
+
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {

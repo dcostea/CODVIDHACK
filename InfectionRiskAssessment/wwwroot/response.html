@@ -53,15 +53,45 @@
           </div>
           <div class="col-sm-8 text-center"  >
             <section class="page-section" id="services" >
+              <p>Riscul dumneavoastră de a fi infectat(ă) cu COVID-19 este:</p>
               <div class="chart_wrapper">
                   <input id="chart_anim" type="text" class="dial" data-fgColor="#fff" data-bgColor="#eee"  />
-
+                
                   <!-- pink circle label -->
                   <div class="circle pink dark">
                       <span id="risk" class="title">Compute...</span>
                       <span class="pie_value" id="bh_value">&nbsp;</span>
                   </div>
               </div>
+
+              <p>Pe baza informațiilor furnizate, aveți un risc scăzut de a fi infectat(ă) cu COVID-19 (Coronavirus) în acest moment. Dacă sunteți totuși îngrijorat(ă), puteți face o evaluare detaliată a COVID-19 (Coronavirus) împreună cu un medic specialist.
+              </p>
+
+              <p>COVID-19 consultație online</p>
+
+              <p>Simptomele obișnuite ale infecției cu coronavirusul COVID-19 includ, dar nu se limitează la: febră, tuse și respirație dificilă. Aceste simptome apar la 2-14 zile de la expunerea la virusul care provoacă COVID-19.
+              </p>
+
+              <p>Deoarece în prezent nu există un vaccin care să prevină infecția, cel mai bun mod de a vă proteja este de a evita expunerea la acest virus. Faceți clic <a href="http://www.ms.ro/recomandari-privind-conduita-sociala-responsabila-in-prevenirea-raspandirii-coronavirus-covid-19/">aici</a> pentru mai multe informații de la Ministerul Sănătății despre cum să vă protejați și să limitați răspândirea acestui virus.</p>
+
+
+              <p>
+                Dacă suspectați că sunteți infectat(ă) sau sunteți infectat cu virusul care cauzează COVID-19, urmați recomandările de <a href="http://www.ms.ro/coronavirus-covid-19/">aici</a> pentru a ajuta la prevenirea răspândirii bolii către oamenii din casă și comunitate.
+              </p>
+
+              <p>
+                Apelați medicul dumneavoastră sau spitalul înainte de a pleca spre aceștia. Apelați 112 dacă aveți o urgență medicală și anunțați operatorul că sunteți sau credeți că sunteți infecta(ă) cu COVID-19.
+              </p>
+
+              <p>Dacă prezentați unul din următoarele semne de urgență, sunați la 112 și solicitați asistență medicală imediată:</p>
+
+              <ul>
+                <li>Probleme respiratorii cu respirații rapide (peste 30 respirații/minut)</li>
+                <li>Stare de confuzie sau somnolență nou apărute</li>
+                <li>Culoare albăstruie a buzelor sau feței</li>
+                <li>Reducere importantă a tensiunii arteriale (mai mică de 90/60 mmHg)</li>
+              </ul>
+
 
               <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
               <script type="text/javascript" src="js/jquery.knob.js"></script>
@@ -104,9 +134,9 @@
                           complete: function () {
 
                    if (accuracy < 0.5) {
-                     $("#risk").text("Low Risk");
+                     $("#risk").text("Risc scazut");
                    } else {
-                     $("#risk").text("High Risk");
+                     $("#risk").text("Risc ridicat");
                    }
                           }
                       });

@@ -572,8 +572,9 @@ function sendRequest(data) {
     .then(json =>  {
         console.log('sad', json)
         let result = json.score[1];
-
-        window.location.href = "https://helloworldforubuntu.azurewebsites.net/result.html?risk=" + result;
+        
+        // window.location.href = "http://127.0.0.1:5501/InfectionRiskAssessment/wwwroot/result.html?risk=" + result;
+        window.location.href = "https://helloworldforubuntu.azurewebsites.net/response.html?risk=" + result;
 
     })
     .catch(err => {
